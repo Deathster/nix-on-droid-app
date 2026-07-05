@@ -1,3 +1,26 @@
+# Nix-on-Droid application (maintained fork)
+
+> **This is a maintained fork of
+> [nix-community/nix-on-droid-app](https://github.com/nix-community/nix-on-droid-app)**
+> (itself a fork of [termux-app](https://github.com/termux/termux-app))
+> — the terminal app for
+> [Deathster/nix-on-droid](https://github.com/Deathster/nix-on-droid).
+>
+> Changes on top of upstream (cherry-picked from current termux-app):
+>
+> - **language switch key works on external/physical keyboards**
+>   (termux `7d87ed76`, fixes termux#4133) — layout switching, e.g.
+>   RU/EN, finally works with a hardware keyboard;
+> - pty read buffer 4KB → 64KB (faster terminal output, fewer syscalls —
+>   which matters double under proot);
+> - fixed inverted termcap values for PageUp/PageDown.
+>
+> **Install:** grab the APK from
+> [Releases](https://github.com/Deathster/nix-on-droid-app/releases).
+> It is signed with this fork's own key, not the F-Droid one — Android
+> will require uninstalling the F-Droid build first (backup your data).
+> Reproducible build: `nix build .#default` in this repo.
+
 # Termux application
 
 [![Build status](https://github.com/termux/termux-app/workflows/Build/badge.svg)](https://github.com/termux/termux-app/actions)
